@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: content-box;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left left middle middle right right' 
+    'footer footer footer footer footer footer';
+    grid-column-gap: 5px;
+} 
+
+.left,
+.middle,
+.right {
+  padding: 10px 1px;
+  height: 200px;
+  margin: 5px;
+  
+
+/* Style the left column */
+.left {
+  grid-area: left; text-align: center;
+}
+
+.left #a {
+    border: #f1f1f1;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle; text-align: center;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right; text-align: center;
+}
+
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas:  
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right'
+  }
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="header">
+  </div>
+  
+<div class="left" style="background-color:#000000; text-align: center; color: #f1f1f1; font-size: 18px; height: 300px;"
+    <h1>icon here</h1>
+    <h2><strong>Virtual</strong></h2>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod culpa aperiam itaque fugiat ad sed sunt quos velit, dolor ipsum. Ipsa beatae illo qui neque sunt ea fugiat, laudantium aspernatur.</p>
+            <button class="btn btn-info" type="button">Read More</button>
+        </div>
+</div>
+<div class="middle" style="background-color:#5d5d5d; text-align: center; color: #f1f1f1; font-size: 18px; height: 300px;"
+    <h1>icon here</h1>
+    <h2><strong>Hybrid</strong></h2>
+        <div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magnam nostrum, laborum ipsum eveniet facilis dicta ipsam, voluptatem sed corrupti amet esse at quos, illum debitis perferendis quia nihil provident.</p>
+            <button class="btn btn-info" type="button">Read More</button>
+        </div>
+</div>  
+<div class="right" style="background-color:#000000; text-align: center; color: #f1f1f1; font-size: 18px; height: 300px;"
+    <h1>icon here</h1>
+    <h2><strong>In Person</strong></h2>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quis quaerat quia nostrum sequi dolorem, itaque mollitia, voluptatem rerum debitis quos facere optio odio quisquam placeat deserunt ducimus perferendis maxime.</p>
+            <button class="btn btn-info" type="button">Read More</button>
+        </div>
+</div>
+  
+  </div>
+</div>
+
+</body>
+</html>

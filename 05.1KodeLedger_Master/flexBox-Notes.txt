@@ -1,0 +1,55 @@
+display: flex;
+
+
+flex-direction : column (naka vertical line) (||)
+flex-direction: row (naka horizontal line) (==)
+flex-direction: column-reverse ( 3 2 1 )
+flex-direction: row-reverse ( naka vertical siya nga 3 2 1 )
+
+flex-wrap: wrap: ang naka ( horizontal nga line ) inig ang screen himoon og responsive
+		musibog siya sa center para mahimog (vertical line).
+
+flex-row: row wrap; pinagsamang ( row at wrap )
+flex-row: column wrap; pinagsamang ( column at wrap)
+flex-basis: 100px; ( mao ni ang kaparehas sa width )
+
+
+align items horizontally ( main axis )
+just-content: flex-start; ( sa left side siya )
+just-content: flex-end; ( sa right side siya )
+justify-content: center;  sakop niya tanan ang main-axis ( para mo center ang element )
+justify-content: space-between;
+justify-content: space-around;
+justify-content: space-evenly;
+
+
+
+display: flex;
+background: #555;
+
+align items vertically ( cross axis )
+height: 600px;  ( mo taas ang height )
+align-items: stretch; ( mo taas ang height )
+align-items: flex-end; ( ang box muadto sa ubos )
+align-items: center; ( ang box muadto sa center )
+align-items: flex-start ( ang box naa sa taas )
+
+
+
+align items vertical where is extra spaces
+align-content: flex-start;
+align-content: space-around;
+
+
+
+align-self: flex-start  ( ang box 1 kay muadto sa taas )
+align-self: flex-end ( ang box 2 kay muadto sa ubos )
+
+
+
+order: 3;
+order: 2;
+order: 1;
+
+
+

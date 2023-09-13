@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Activity 2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/lightbox.min.css" />
+    <link rel="stylesheet" href="./css/utilities.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-style: italic;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        background: #fff;
+        line-height: 1.6;
+      }
+
+      .main-header {
+        background-image: url(/images/home/showcase.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        font-style: italic;
+      }
+
+      /*-----------navbar links--------------*/
+
+      #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        opacity: 0.8;
+        width: 100%;
+        height: 70px;
+        padding: 20px;
+        position: fixed;
+        background-color: #333;
+      }
+
+      #navbar a {
+        color: #fff;
+        padding: 10px 20px;
+        margin: 0 5px;
+      }
+
+      #navbar .navbar-menu ul {
+        display: flex;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      #navbar a:hover {
+        color: #00e235;
+        background: #fff;
+        border-radius: 5px;
+      }
+
+      /*------------header here------------*/
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        padding: 0 20px;
+      }
+
+      .title h1 {
+        font-size: 55px;
+        line-height: 1.2;
+        font-weight: 10;
+        text-transform: capitalize;
+        color: #fff;
+      }
+
+      .title p {
+        font-size: 23;
+        max-width: 600px;
+        margin: 20px 0 30px;
+        color: #fff;
+      }
+
+      .title a {
+        padding: 10px 30px;
+        color: #fff;
+        background-color: #28a745;
+        border-radius: 5px;
+      }
+
+      .main-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .main-header * {
+        z-index: 1;
+      }
+
+      /*----------------section------------------*/
+
+      #section {
+        height: 70vh;
+      }
+
+      .final-section {
+        margin-top: 50px;
+        margin-left: 30px;
+      }
+
+      .container {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .image img {
+        margin-top: 50px;
+        height: 200px;
+        border-radius: 50%;
+        width: 300px;
+      }
+
+      #section > p {
+        margin-left: 30px;
+        margin-top: 50px;
+        line-height: 25px;
+      }
+
+      /*------------------footer--------------*/
+      .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 150px;
+        background-color: #333;
+      }
+
+      footer a,
+      footer p {
+        color: #fff;
+      }
+
+      .footer a:hover {
+        color: #28a745;
+      }
+
+      .footer .social > * {
+        margin-right: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!----------header------------>
+    <header class="main-header">
+      <div id="navbar">
+        <h1 class="logo">
+          <span class="text-primary"><i class="fas fa-book-open"></i>Kode</span
+          >Ledger
+        </h1>
+        <nav class="navbar-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Cases</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="title">
+        <h1>The Sky is the Limit</h1>
+        <p>We provide world class financial assistance</p>
+        <a href="#"><i class="fas fa-chevron-right"></i> Read More</a>
+      </div>
+    </header>
+
+    <!----------------section-------------->
+    <section id="section">
+      <div class="final-section">
+        <h1>Blog Post One</h1>
+        <h2>
+          <i class="fa fa-user-alt"></i
+          ><em>Posted by Alden Rye | November 17, 2022</em>
+        </h2>
+        <hr />
+      </div>
+      <div class="container">
+        <div class="image">
+          <img src="/images/blog/blog1.jpg" alt="building" />
+        </div>
+      </div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
+        asperiores minima expedita mollitia earum nihil ut? Fugit blanditiis
+        itaque quae ad. Ipsam reprehenderit, eos quos laborum quibusdam
+        assumenda in sit, officia sequi, quidem rerum omnis est iure facere
+        asperiores ipsa iste consequuntur vel? Perferendis blanditiis fuga ab
+        doloremque exercitationem modi libero quas consectetur nobis voluptas.
+        Modi, ratione? Accusantium, ullam? Reiciendis minima voluptas nisi
+        officiis? Deleniti, nemo. Animi quo non voluptatum quia, sed possimus
+        explicabo! Porro, optio tempora ab eligendi natus dolores nihil vel,
+        iure saepe recusandae animi corrupti illo, necessitatibus sit esse rem
+        tempore dolor similique eius adipisci nemo sed!
+      </p>
+    </section>
+
+    <!------------footer------------->
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>Copyright &copy; 2023 - Kodeledger</p>
+    </footer>
+  </body>
+</html>

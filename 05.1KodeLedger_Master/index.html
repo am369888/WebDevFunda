@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/lightbox.min.css" />
+    <link rel="stylesheet" href="./css/utilities.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <title>Activity 2</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-style: italic;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        background: #fff;
+        line-height: 1.6;
+      }
+
+      .main-header {
+        background-image: url(/images/home/showcase.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        font-style: italic;
+      }
+
+      /*-----------navbar links--------------*/
+
+      #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        opacity: 0.8;
+        width: 100%;
+        height: 70px;
+        padding: 20px;
+        position: fixed;
+        background-color: #333;
+      }
+
+      #navbar a {
+        color: #fff;
+        padding: 10px 20px;
+        margin: 0 5px;
+      }
+
+      #navbar .navbar-menu ul {
+        display: flex;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      #navbar a:hover {
+        color: #00e235;
+        background: #fff;
+        border-radius: 5px;
+      }
+
+      /*--------header here-------------*/
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        padding: 0 20px;
+      }
+
+      .title h1 {
+        font-size: 55px;
+        line-height: 1.2;
+        font-weight: 10;
+        text-transform: capitalize;
+        color: #fff;
+      }
+
+      .title p {
+        font-size: 23;
+        max-width: 600px;
+        margin: 20px 0 30px;
+        color: #fff;
+      }
+
+      .title a {
+        padding: 10px 30px;
+        color: #fff;
+        background-color: #28a745;
+        border-radius: 5px;
+      }
+
+      .main-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .main-header * {
+        z-index: 1;
+      }
+
+      /*-----------first section--------------*/
+      .main-section .container-section {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: space-evenly;
+      }
+
+      .icon-building i {
+        background-color: #00e235;
+        border-radius: 50%;
+        color: white;
+        font-size: 2rem;
+        padding: 20px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+
+      /*------second section-------*/
+      .main-box {
+        display: flex;
+        height: 100vh;
+        font-style: italic;
+      }
+
+      .left-image {
+        width: 50%;
+      }
+
+      .left-image img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .right-image {
+        background-color: #28a745;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+      }
+
+      .right-image p,
+      .right-image a {
+        margin-left: 35px;
+        line-height: 35px;
+        color: white;
+      }
+
+      .right-image h4,
+      .right-image h2 {
+        margin-left: 35px;
+      }
+
+      .right-image a {
+        border: 1px solid white;
+        width: 150px;
+        margin-left: 35px;
+        padding: 10px;
+        margin-top: 30px;
+        border-radius: 5px;
+      }
+
+      .right-image i {
+        margin-left: 20px;
+      }
+
+      /*---------third section-----------*/
+      .business {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 50px;
+        height: 20vh;
+        margin-top: 2rem;
+        font-style: italic;
+      }
+
+      .business h1 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 5;
+        font-size: 2.5rem;
+      }
+
+      /*---------fourth container----------*/
+      .first-container {
+        display: flex;
+      }
+      .second-container {
+        display: flex;
+      }
+
+      .image {
+        flex: 1; /* To evenly distribute space among all images */
+        margin: 10px;
+      }
+
+      .image img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /*-----------fifth container------------*/
+      .fifth-container {
+        display: flex;
+        height: 100vh;
+        font-style: italic;
+      }
+
+      .left-image {
+        width: 50%;
+      }
+
+      .left-image img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .image-right {
+        background-color: #0284d0;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+      }
+
+      .image-right p,
+      .image-right a {
+        margin-left: 35px;
+        line-height: 35px;
+        color: white;
+      }
+
+      .image-right h4,
+      .image-right h2 {
+        margin-left: 35px;
+      }
+
+      .image-right a {
+        border: 1px solid white;
+        width: 150px;
+        margin-left: 35px;
+        padding: 10px;
+        margin-top: 30px;
+        border-radius: 5px;
+      }
+
+      .image-right i {
+        margin-left: 20px;
+      }
+
+      /*-------------article-------------*/
+      .business {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 50px;
+        height: 20vh;
+        margin-top: 2rem;
+        font-style: italic;
+      }
+
+      .business h1 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 5;
+        font-size: 2.5rem;
+      }
+
+      /*----------first article 3 pictures------------*/
+      .article-pictures {
+        display: flex;
+      }
+
+      .image-article img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        padding: 1rem;
+      }
+
+      .image-article {
+        display: inline-block;
+        text-align: center; /* Optional: Center-align the text */
+        margin: 10px; /* Optional: Add margin for spacing */
+      }
+
+      /*----------second article forms--------------*/
+      .second-article {
+        display: flex;
+        height: 100vh;
+      }
+      .main-form {
+        background-color: #f4f4f4;
+        width: 50%;
+        display: flex;
+      }
+
+      .form-container h1 {
+        margin-top: 250px;
+      }
+      .form-container .name {
+        margin-top: 5px;
+      }
+
+      .form-container .name,
+      .form-container .email,
+      .form-container .phone,
+      .form-container .button,
+      .form-container h1 {
+        margin-left: 20px;
+      }
+
+      .form-container input,
+      .form-container button {
+        width: 765px;
+        height: 40px;
+        margin: 0.2rem;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+      }
+
+      .form-container button {
+        background-color: #28a745;
+        color: #fff;
+      }
+
+      /*---------------footer------------*/
+      .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 150px;
+        background-color: #333;
+      }
+
+      footer a,
+      footer p {
+        color: #fff;
+      }
+
+      .footer a:hover {
+        color: #28a745;
+      }
+
+      .footer .social > * {
+        margin-right: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-------------header-------------->
+    <header class="main-header">
+      <div id="navbar">
+        <h1 class="logo">
+          <span class="text-primary"><i class="fas fa-book-open"></i>Kode</span
+          >Ledger
+        </h1>
+        <nav class="navbar-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Cases</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="title">
+        <h1>The Sky is the Limit</h1>
+        <p>We provide world class financial assistance</p>
+        <a href="#"><i class="fas fa-chevron-right"></i> Read More</a>
+      </div>
+    </header>
+
+    <section class="main-section">
+      <!--first section-->
+      <div class="container-section">
+        <div class="icon-building">
+          <i class="fas fa-university fa-2x"></i>
+          <h4>Investment Banking</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+            quod.
+          </p>
+        </div>
+        <div class="icon-building">
+          <i class="fas fa-university fa-2x"></i>
+          <h4>Investment Banking</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+            quod.
+          </p>
+        </div>
+        <div class="icon-building">
+          <i class="fas fa-university fa-2x"></i>
+          <h4>Investment Banking</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+            quod.
+          </p>
+        </div>
+      </div>
+
+      <!--second section-->
+      <div class="main-box">
+        <div class="left-image">
+          <img src="/images/home/people.jpg" alt="people" />
+        </div>
+        <div class="right-image">
+          <h4>What are you looking for</h4>
+          <h2>We provide bespoke solutions</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea non
+            libero doloremque nobis? Accusantium ipsam qui ad hic iure earum.
+          </p>
+          <a href="#"><i class="fas fa-chevron-right"></i> Read More</a>
+        </div>
+      </div>
+
+      <!--third section-->
+      <div class="business">
+        <h4>This is what we do</h4>
+        <h1>Business Cases</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+          aperiam!
+        </p>
+      </div>
+
+      <!--fourth section-->
+      <div class="first-container">
+        <div class="image">
+          <img src="/images/cases/cases1.jpg" alt="picture 1" />
+        </div>
+        <div class="image">
+          <img src="/images/cases/cases2.jpg" alt="picture 2" />
+        </div>
+        <div class="image">
+          <img src="/images/cases/cases3.jpg" alt="picture 3" />
+        </div>
+        <div class="image">
+          <img src="/images/cases/cases4.jpg" alt="picture 4" />
+        </div>
+      </div>
+      <div class="second-container">
+        <div class="image">
+          <img src="/images/cases/cases5.jpg" alt="picture 5" />
+        </div>
+        <div class="image">
+          <img src="/images/cases/cases6.jpg" alt="picture 6" />
+        </div>
+        <div class="image">
+          <img src="/images/cases/cases7.jpg" alt="picture 7" />
+        </div>
+        <div class="image">
+          <img src="/images/cases/cases8.jpg" alt="picture 8" />
+        </div>
+      </div>
+
+      <!-------fifth section-------->
+      <div class="fifth-container">
+        <div class="image-right">
+          <h4>What are you looking for</h4>
+          <h2>We provide bespoke solutions</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea non
+            libero doloremque nobis? Accusantium ipsam qui ad hic iure earum.
+          </p>
+          <a href="#"><i class="fas fa-chevron-right"></i> Read More</a>
+        </div>
+        <div class="left-image">
+          <img src="/images/home/blog.jpg" alt="coffe" />
+        </div>
+      </div>
+    </section>
+
+    <!--------------article---------------->
+    <article id="article">
+      <div class="business">
+        <h4>This is what we do</h4>
+        <h1>Business Cases</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+          aperiam!
+        </p>
+      </div>
+
+      <!-------------first article-------------->
+      <div class="article-pictures">
+        <div class="image-article">
+          <img src="/images/team/person1.jpg" alt="person 1" />
+          <h4>Alden Rye</h4>
+          <p>President</p>
+        </div>
+        <div class="image-article">
+          <img src="/images/team/person2.jpg" alt="person 2" />
+          <h4>Catrice Dominique</h4>
+          <p>Vice President</p>
+        </div>
+        <div class="image-article">
+          <img src="/images/team/person3.jpg" alt="person 3" />
+          <h4>Benjamin Cruz</h4>
+          <p>Marketing Head</p>
+        </div>
+      </div>
+
+      <!-----------second article----------------->
+      <div class="second-article">
+        <div class="left-image">
+          <img src="/images/home/contact.jpg" alt="person 1" />
+        </div>
+        <div class="main-form">
+          <div class="form-container">
+            <h1>Request Callback</h1>
+            <form action="#">
+              <div class="name">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Enter name"
+                />
+              </div>
+              <div class="email">
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div class="phone">
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder="Enter phone"
+                />
+              </div>
+              <div class="button">
+                <button>Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!--------footer---------->
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>Copyright &copy; 2023 - Kodeledger</p>
+    </footer>
+  </body>
+</html>
